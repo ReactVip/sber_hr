@@ -1,19 +1,26 @@
 import {$authHost} from "./inder";
+import axios from "axios";
 
-export const registration = async (form_data) => {
+export const registration = (username, password) => {
+    const instance = axios.create({
+        baseURL: "https://sberhr.herokuapp.com/",
+        timeout: 1000
+    })
 
-    await $authHost.post('registration', form_data)
-            .then(function(response) {
-                console.log(1)
-            })
+    instance.post('/registration', {username,password}).then(data =>{
+        return data
+    })
 
-    // let res = await $authHost.post('registration', form_data);
-    //
-    // let data = res.data;
-    // console.log(data);
 }
 
-export const login = async (username, password) => {
-    const {data} = await $authHost.post('login', {username, password})
-    return data
+export const login = (form_data) => {
+    const instance = axios.create({
+        baseURL: "https://sberhr.herokuapp.com/",
+        timeout: 1000
+    })
+
+    instance.post('/login', form_data)
+        .then(res => {
+            console.log(res); // Результат ответа от сервера
+        });
 }

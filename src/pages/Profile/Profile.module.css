@@ -3,7 +3,10 @@
     margin: 0 auto;
     margin-top: 50px;
 }
-
+a {
+    color: #6b6a6a;
+    font-weight: 500;
+}
 .profile_card{
     width: 100%;
     height: 300px;
@@ -29,12 +32,20 @@
 }
 .name_rate{
     display: flex;
+    align-items: center;
+    align-content: center;
 }
 .rate{
     margin-top: 42px;
-    margin-left: 20px;
+    margin-left: 30px;
     width: 50px;
     height: 50px;
+}
+.achivs{
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 30px;
+    color: #ffffff;
 }
 .all_descr{
     padding-left: 20px;
@@ -67,17 +78,18 @@
     border-bottom: 4px solid #3fd12c;
 }
 .edit_profile{
-    font-weight: 500;
-    color: #535353;
+    margin-top: 15px;
 }
 .edit_profile_butt{
-    padding-top: 5px;
-    padding-left: 8px;
-    margin-top: 13px;
-    height: 30px;
+    cursor: pointer;
+    color: #6b6a6a;
+    height: 35px;
+    font-size: 15px;
     width: 200px;
-    border: 1px solid #535353;;
+    border: 1px solid #6b6a6a;
+    outline: none;
     border-radius: 20px;
+    background-color: #ffffff;
 }
 .line{
     height: 1px;
@@ -85,27 +97,27 @@
     background-color: #cfcfcf;
 }
 .top_cards{
-    margin-top: 10px;
     display: flex;
 }
 .card_info{
     height: 370px;
     width: 580px;
-    background-color: #e5e5e5;
+    background-color: #ffffff;
     border-radius: 15px;
     margin: 10px;
+    padding: 40px;
 }
 .xz{
     height: 130px;
     width: 580px;
-    background-color: #e5e5e5;
+    background-color: #ffffff;
     border-radius: 15px;
     margin: 10px;
 }
 .xzxz{
-    height: 220px;
+    height: 300px;
     width: 580px;
-    background-color: #e5e5e5;
+    background-color: #ffffff;
     border-radius: 15px;
     margin: 10px;
     margin-top: 20px;
@@ -122,4 +134,17 @@
 .flex_cards {
     display: flex;
     flex-wrap: wrap;
+}
+.cards_back{
+    background-color: #e7e7e7;
+}
+.info{
+    display: flex;
+    padding: 15px;
+    font-size: 17px;
+    color: #000000;
+}
+.inform{
+    margin-left: 5px;
+    font-weight: bold;
 }

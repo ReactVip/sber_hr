@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00AE4C;
+    background-image: linear-gradient(to top right, rgb(63, 209, 44), rgb(62, 209, 57), rgb(62, 208, 69), rgb(61, 208, 82), rgb(60, 207, 94), rgb(59, 207, 107), rgb(59, 206, 119), rgb(58, 206, 132), rgb(57, 205, 144), rgb(56, 205, 157), rgb(56, 204, 169), rgb(55, 204, 182));
     height: 100vh;
 }
 

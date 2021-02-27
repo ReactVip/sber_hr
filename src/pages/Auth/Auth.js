@@ -1,10 +1,11 @@
 import React,{useState, useContext} from 'react';
 import s from './Auth.module.css'
 import {NavLink, useHistory, useLocation} from "react-router-dom";
-import {LOGIN_ROUTE, PROFILE_ROUTE, REGISTRATION_ROUTE, SBER_ROUTE} from "../../utils/consts";
+import {ALLFEED_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE, REGISTRATION_ROUTE, SBER_ROUTE} from "../../utils/consts";
 import {observer} from "mobx-react-lite";
 import {Context} from "../../index";
 import {login, registration} from "../../http/userApi";
+import axios from "axios";
 
 const Auth = observer(() => {
     const {user} = useContext(Context)
@@ -16,20 +17,21 @@ const Auth = observer(() => {
     const [username, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+
     const click = async () => {
         try {
             let data;
             if (isLogin) {
-                data = await login(username, password);
-            } else {
                 const form_data = new FormData();
                 form_data.append('username', username);
                 form_data.append('password', password);
-                data = await registration(form_data);
+                data = await login(form_data);
+            } else {
+                data = await registration(username, password);
             }
             user.setUser(user)
             user.setIsAuth(true)
-            history.push(PROFILE_ROUTE)
+            history.push(ALLFEED_ROUTE)
         } catch (e) {
             alert(e.response.data.message)
         }

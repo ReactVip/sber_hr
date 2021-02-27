@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './Profile.module.css'
 import avatar from '../../assets/avatar.jpg'
-import rate from '../../assets/rate.png'
+import rate from '../../assets/rate.svg'
+import {NavLink} from "react-router-dom";
 
 const Profile = () => {
     return (
@@ -13,6 +14,7 @@ const Profile = () => {
                         <div className={s.name_rate}>
                             <h1 className={s.profile_name}>Онуфриенко Артем Юрьевич</h1>
                             <img className={s.rate} src={rate}/>
+                            <div className={s.achivs}>место для ваших достижений</div>
                         </div>
 
                         <div className={s.all_descr}>
@@ -30,56 +32,62 @@ const Profile = () => {
             <div className={s.all_inline_links}>
                 <div className={s.inline_links}>
                     <div className={s.links}>
-                        Таймлайн
+                        <NavLink to={'profile'}>Таймлайн</NavLink>
                     </div>
                     <div className={s.link}>
-                        Подписки
+                        <NavLink to={'profile/subs'}>Подписки</NavLink>
                     </div>
                     <div className={s.link}>
-                        Подписчики
+                        <NavLink to={'profile/mysubs'}>Подписчики</NavLink>
                     </div>
                     <div className={s.link}>
-                        Репосты
+                        <NavLink to={'profile/reposts'}>Репосты</NavLink>
                     </div>
                 </div>
                 <div className={s.edit_profile}>
-                    <div className={s.edit_profile_butt}>
-                        Редактировать профиль</div>
+                    <button className={s.edit_profile_butt}>
+                        Редактировать профиль</button>
                 </div>
             </div>
             <div className={s.line}>
 
             </div>
 
+            <div className={s.cards_back}>
+                <div className={s.top_cards}>
+                    <div className={s.card_info}>
+                        <div className={s.info}><div className={s.info_title}>Почта: </div><div className={s.inform}>nufr1sh@mail.ru</div></div>
+                        <div className={s.info}><div className={s.info_title}>Дата рождения: </div><div className={s.inform}>01.11.2000</div></div>
+                        <div className={s.info}><div className={s.info_title}>Телефон: </div><div className={s.inform}>8(985)187-08-45</div></div>
+                        <div className={s.info}>...</div>
+                        <div className={s.info}>...</div>
+                        <div className={s.info}>...</div>
+                    </div>
+                    <div>
+                        <div className={s.xz}>
 
-            <div className={s.top_cards}>
-                <div className={s.card_info}>
-                    доп инфа о профиле
-                </div>
-                <div>
-                    <div className={s.xz}>
-                        хз
-                    </div>
-                    <div className={s.xzxz}>
-                        хз
+                        </div>
+                        <div className={s.xzxz}>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className={s.flex_cards}>
-                <div className={s.post}>
-                    пост
-                </div>
-                <div className={s.post}>
-                    пост
-                </div>
-                <div className={s.post}>
-                    пост
-                </div>
-                <div className={s.post}>
-                    пост
-                </div>
-                <div className={s.post}>
-                    пост
+                <div className={s.flex_cards}>
+                    <div className={s.post}>
+                        пост
+                    </div>
+                    <div className={s.post}>
+                        пост
+                    </div>
+                    <div className={s.post}>
+                        пост
+                    </div>
+                    <div className={s.post}>
+                        пост
+                    </div>
+                    <div className={s.post}>
+                        пост
+                    </div>
                 </div>
             </div>
         </div>
