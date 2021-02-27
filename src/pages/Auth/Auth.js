@@ -4,6 +4,7 @@ import {NavLink, useHistory, useLocation} from "react-router-dom";
 import {LOGIN_ROUTE, PROFILE_ROUTE, REGISTRATION_ROUTE, SBER_ROUTE} from "../../utils/consts";
 import {observer} from "mobx-react-lite";
 import {Context} from "../../index";
+import {login, registration} from "../../http/userApi";
 
 const Auth = observer(() => {
     const {user} = useContext(Context)
@@ -12,24 +13,26 @@ const Auth = observer(() => {
     const location = useLocation()
     const isLogin = location.pathname === LOGIN_ROUTE
 
-    const [email, setEmail] = useState('')
+    const [username, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const click =  () => {
-        // try {
-            // let data;
-            // if (isLogin) {
-            //     data = await login(email, password);
-            // } else {
-            //     data = await registration(email, password);
-            // }
-            // user.setUser(user)
-console.log(user.isAuth)
+    const click = async () => {
+        try {
+            let data;
+            if (isLogin) {
+                data = await login(username, password);
+            } else {
+                const form_data = new FormData();
+                form_data.append('username', username);
+                form_data.append('password', password);
+                data = await registration(form_data);
+            }
+            user.setUser(user)
             user.setIsAuth(true)
             history.push(PROFILE_ROUTE)
-        // } catch (e) {
-        //     alert(e.response.data.message)
-        // }
+        } catch (e) {
+            alert(e.response.data.message)
+        }
 
     }
 
@@ -38,10 +41,10 @@ console.log(user.isAuth)
             <div className={s.auth_block}>
                 <h1>HR SBER</h1>
                 <div className={s.auth_block_content}>
-                    <form>
+                    <form method="POST">
                         <input
                             placeholder="Имя пользователя"
-                            value={email}
+                            value={username}
                             onChange={e => setEmail(e.target.value)}
                             className={s.input}/>
                         <input
@@ -51,7 +54,8 @@ console.log(user.isAuth)
                             onChange={e => setPassword(e.target.value)}
                             type="password"
                         />
-                        <button className={s.button}
+                        <button type="submit"
+                            className={s.button}
                                 onClick={click}>
                             {isLogin ? 'Войти' : 'Регистрация'}
                         </button>
