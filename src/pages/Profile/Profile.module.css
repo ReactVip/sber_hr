@@ -1,0 +1,125 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.profile_card{
+    width: 100%;
+    height: 300px;
+    background-color: #42f590;
+    border-radius: 15px;
+    background-image: linear-gradient(to top right, rgb(63, 209, 44), rgb(62, 209, 57), rgb(62, 208, 69), rgb(61, 208, 82), rgb(60, 207, 94), rgb(59, 207, 107), rgb(59, 206, 119), rgb(58, 206, 132), rgb(57, 205, 144), rgb(56, 205, 157), rgb(56, 204, 169), rgb(55, 204, 182));
+}
+.ava_name_rate{
+    display: flex;
+}
+.avatar {
+    margin: 30px;
+    border: 4px solid #00a44f;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.profile_name{
+    align-content: center;
+    padding-top: 40px;
+    padding-left: 20px;
+    color: white;
+}
+.name_rate{
+    display: flex;
+}
+.rate{
+    margin-top: 42px;
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+.all_descr{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.spec{
+    font-size: 20px;
+    color: #ffffff;
+}
+.other_spec{
+    font-size: 15px;
+    color: #c5ffc7;
+}
+.all_inline_links{
+    display: flex;
+    justify-content: space-between;
+}
+.inline_links{
+    display: flex;
+}
+.link{
+    padding: 20px;
+    font-weight: 500;
+    color: #535353;
+}
+.links{
+    padding: 20px;
+    font-weight: 500;
+    color: #535353;
+    border-bottom: 4px solid #3fd12c;
+}
+.edit_profile{
+    font-weight: 500;
+    color: #535353;
+}
+.edit_profile_butt{
+    padding-top: 5px;
+    padding-left: 8px;
+    margin-top: 13px;
+    height: 30px;
+    width: 200px;
+    border: 1px solid #535353;;
+    border-radius: 20px;
+}
+.line{
+    height: 1px;
+    margin: 0 auto;
+    background-color: #cfcfcf;
+}
+.top_cards{
+    margin-top: 10px;
+    display: flex;
+}
+.card_info{
+    height: 370px;
+    width: 580px;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+    margin: 10px;
+}
+.xz{
+    height: 130px;
+    width: 580px;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+    margin: 10px;
+}
+.xzxz{
+    height: 220px;
+    width: 580px;
+    background-color: #e5e5e5;
+    border-radius: 15px;
+    margin: 10px;
+    margin-top: 20px;
+}
+.post{
+    height: 425px;
+    width: 575px;
+    border: 2px solid #c6c6c6;
+    border-radius: 15px;
+    margin: 10px;
+    background-color: #9ee78e;
+}
+
+.flex_cards {
+    display: flex;
+    flex-wrap: wrap;
+}

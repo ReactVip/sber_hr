@@ -1,0 +1,99 @@
+.auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00AE4C;
+    height: 100vh;
+}
+
+.auth_block h1{
+    text-align: center;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 112px;
+    color: #FFFFFF;
+    text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+
+.auth_block_content{
+    align-items: center;
+    padding-top: 32px;
+    border-radius: 6px;
+    height: 365px;
+    width: 575px;
+    background-color: white;
+}
+
+.auth_block_content form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 462px;
+    height: 73px;
+    background-color: #EAEAEA;
+    border-radius: 6px;
+    border: none;
+    outline:none;
+    padding: 0 20px;
+    color: #AEAEAE;
+    font-size: 18px;
+}
+
+.button{
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    padding: 0 20px;
+    width: 502px;
+    height: 73px;
+    background: #00AE4C;
+    border-radius: 6px;
+    color: white;
+    outline: none;
+    border:none;
+    text-transform: uppercase;
+}
+
+.text a{
+    text-decoration: none;
+    color: #00AE4C;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #00AE4C;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.text span{
+    padding-right: 50px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #A7A7A7;
+
+}
