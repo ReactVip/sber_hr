@@ -1,6 +1,7 @@
 import React from 'react';
 
-const AllFeed = () => {
+const AllFeed =() => {
+
     return (
         <div>
             вся лента

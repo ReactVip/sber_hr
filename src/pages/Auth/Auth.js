@@ -4,8 +4,9 @@ import {NavLink, useHistory, useLocation} from "react-router-dom";
 import {ALLFEED_ROUTE, LOGIN_ROUTE, PROFILE_ROUTE, REGISTRATION_ROUTE, SBER_ROUTE} from "../../utils/consts";
 import {observer} from "mobx-react-lite";
 import {Context} from "../../index";
-import {login, registration} from "../../http/userApi";
+import {login, registration, userInfo, userInfoId} from "../../http/userApi";
 import axios from "axios";
+import {useEffect} from "react";
 
 const Auth = observer(() => {
     const {user} = useContext(Context)

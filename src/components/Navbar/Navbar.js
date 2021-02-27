@@ -4,7 +4,9 @@ import s from './Navbar.module.css'
 import sberbank from "../../assets/sber.png";
 import {ALLFEED_ROUTE, ALLRATING_ROUTE, PROFILE_ROUTE, SBER_ROUTE, SUBSFEED_ROUTE} from "../../utils/consts";
 import avatar from '../../assets/avatar.jpg'
+
 const Navbar = () => {
+
     return (
         <nav className={s.navbar_main}>
             <div className={s.navbar_main_left}>

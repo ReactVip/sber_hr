@@ -3,8 +3,11 @@ import s from './Profile.module.css'
 import avatar from '../../assets/avatar.jpg'
 import rate from '../../assets/rate.svg'
 import {NavLink} from "react-router-dom";
+import {Context} from "../../index";
+import {useContext} from "react";
 
 const Profile = () => {
+    const {user} = useContext(Context)
     return (
         <div className={s.container}>
             <div className={s.profile_card}>

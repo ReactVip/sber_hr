@@ -4,7 +4,6 @@ import axios from "axios";
 export const registration = (username, password) => {
     const instance = axios.create({
         baseURL: "https://sberhr.herokuapp.com/",
-        timeout: 1000
     })
 
     instance.post('/registration', {username,password}).then(data =>{
@@ -16,11 +15,41 @@ export const registration = (username, password) => {
 export const login = (form_data) => {
     const instance = axios.create({
         baseURL: "https://sberhr.herokuapp.com/",
-        timeout: 1000
+        withCredentials: true
     })
 
-    instance.post('/login', form_data)
+    const {data} = instance.post('/login', form_data)
         .then(res => {
-            console.log(res); // Результат ответа от сервера
+            alert(res.headers)
+            for (let key in res.headers) {
+                console.log(key, res.headers[key]);
+            }
+            return res.data // Результат ответа от сервера
+        });
+    // instance.get('/api/getUseId')
+    //     .then(res => {
+    //         alert(res)
+    //         return res.data // Результат ответа от сервера
+    //     });
+}
+
+export const userInfo = (id) => {
+    const instance = axios.create({
+        baseURL: "https://sberhr.herokuapp.com/",
+    })
+    const {data} = instance.get('/api/getUserInfo/')
+        .then(res => {
+            alert(res)
+            return res.data // Результат ответа от сервера
+        });
+}
+
+export const userInfoId = () => {
+    const instance = axios.create({
+        baseURL: "https://sberhr.herokuapp.com/",
+    })
+    const {data} = instance.get('/api/getUseId')
+        .then(res => {
+            return res.data // Результат ответа от сервера
         });
 }
